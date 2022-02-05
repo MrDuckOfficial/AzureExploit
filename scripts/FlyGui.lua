@@ -1,0 +1,92 @@
+-- Fly GUI
+ 
+ 
+-- Instances:
+ 
+local fly = Instance.new("ScreenGui")
+local epic = Instance.new("Frame")
+local backgroundtitle = Instance.new("TextLabel")
+local creator = Instance.new("TextLabel")
+local title = Instance.new("TextLabel")
+local close = Instance.new("TextButton")
+local flybutton = Instance.new("TextButton")
+ 
+--Properties:
+ 
+fly.Name = "fly"
+fly.Parent = game.CoreGui
+fly.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ 
+epic.Name = "epic"
+epic.Parent = fly
+epic.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+epic.Position = UDim2.new(0.0911376476, 0, 0.466830462, 0)
+epic.Size = UDim2.new(0, 181, 0, 178)
+epic.Active = true
+epic.Draggable = true
+ 
+backgroundtitle.Name = "backgroundtitle"
+backgroundtitle.Parent = epic
+backgroundtitle.BackgroundColor3 = Color3.fromRGB(170, 0, 255)
+backgroundtitle.Size = UDim2.new(0, 182, 0, 43)
+backgroundtitle.Font = Enum.Font.SciFi
+backgroundtitle.Text = ""
+backgroundtitle.TextColor3 = Color3.fromRGB(0, 0, 0)
+backgroundtitle.TextScaled = true
+backgroundtitle.TextSize = 14.000
+backgroundtitle.TextWrapped = true
+ 
+creator.Name = "creator"
+creator.Parent = epic
+creator.BackgroundColor3 = Color3.fromRGB(170, 0, 255)
+creator.Position = UDim2.new(0.00442049652, 0, 0.762519121, 0)
+creator.Size = UDim2.new(0, 181, 0, 42)
+creator.Font = Enum.Font.SourceSans
+creator.Text = "Made by Arowix"
+creator.TextColor3 = Color3.fromRGB(0, 0, 0)
+creator.TextScaled = true
+creator.TextSize = 14.000
+creator.TextWrapped = true
+ 
+title.Name = "title"
+title.Parent = epic
+title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+title.BackgroundTransparency = 1.000
+title.Position = UDim2.new(0.0497237556, 0, 0, 0)
+title.Size = UDim2.new(0, 119, 0, 43)
+title.Font = Enum.Font.SciFi
+title.Text = "Fly"
+title.TextColor3 = Color3.fromRGB(0, 0, 0)
+title.TextScaled = true
+title.TextSize = 14.000
+title.TextWrapped = true
+ 
+close.Name = "close"
+close.Parent = epic
+close.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+close.Position = UDim2.new(0.76795578, 0, 0, 0)
+close.Size = UDim2.new(0, 43, 0, 43)
+close.Font = Enum.Font.GothamBlack
+close.Text = "X"
+close.TextColor3 = Color3.fromRGB(0, 0, 0)
+close.TextScaled = true
+close.TextSize = 14.000
+close.TextWrapped = true
+close.MouseButton1Down:connect(function()
+epic.Visible = false
+end)
+ 
+flybutton.Name = "flybutton"
+flybutton.Parent = epic
+flybutton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+flybutton.Position = UDim2.new(0.243093923, 0, 0.344781578, 0)
+flybutton.Size = UDim2.new(0, 84, 0, 42)
+flybutton.Font = Enum.Font.SourceSans
+flybutton.Text = "Click me to Fly"
+flybutton.TextColor3 = Color3.fromRGB(0, 0, 0)
+flybutton.TextSize = 14.000
+flybutton.MouseButton1Down:connect(function()
+   loadstring(game:HttpGet("https://pastebin.com/raw/7rXZ9VNc", true))()
+   flybutton.Text = "Press E to fly and unfly"
+   flybutton.TextSize = 10.000
+end)
